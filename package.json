@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rexsyj/gulpDemo/issues"
   },
-  "homepage": "https://github.com/rexsyj/gulpDemo#readme"
+  "homepage": "https://github.com/rexsyj/gulpDemo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
