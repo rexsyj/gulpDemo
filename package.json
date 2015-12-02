@@ -1,0 +1,22 @@
+{
+  "name": "gulp_demo",
+  "version": "1.0.0",
+  "description": "This is a demo for gulp.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexsyj/gulpDemo.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "rex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rexsyj/gulpDemo/issues"
+  },
+  "homepage": "https://github.com/rexsyj/gulpDemo#readme"
+}
