@@ -8,6 +8,7 @@ var spriter = require('gulp-css-spriter');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 
 gulp.task('clean', function() {
     return del(['build']);
@@ -46,6 +47,12 @@ gulp.task('minify-css', function() {
     return gulp.src('./css/*.css')
         .pipe(minifyCss())
         .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('uglify', function() {
+    return gulp.src('./js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('default', ["clean"]);
