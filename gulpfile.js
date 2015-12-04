@@ -6,6 +6,7 @@ var del = require('del');
 var less = require('gulp-less');
 var spriter = require('gulp-css-spriter');
 var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 
 gulp.task('clean', function() {
     return del(['build']);
@@ -31,6 +32,12 @@ gulp.task('autoprefixer', function () {
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
+        .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('concat', function() {
+    return gulp.src('./css/*.css')
+        .pipe(concat('all.css'))
         .pipe(gulp.dest('build/css'));
 });
 
