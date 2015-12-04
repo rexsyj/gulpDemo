@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var del = require('del');
 var less = require('gulp-less');
 var spriter = require('gulp-css-spriter');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function() {
     return del(['build']);
@@ -25,4 +26,12 @@ gulp.task('spriter', function() {
         .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', ["clean","less","spriter"]);
+gulp.task('autoprefixer', function () {
+    return gulp.src('./css/autoprefixTest.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('default', ["clean","less","spriter","autoprefix"]);
