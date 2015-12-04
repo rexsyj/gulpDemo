@@ -1,0 +1,85 @@
+.aenean
+{
+    width: 120px;
+    height: 100px;
+    background: url('../img/aenean-purple.png');
+}
+
+.aenean-double-quotes
+{
+    width: 120px;
+    height: 100px;
+    background: url("../img/aenean-purple.png");
+}
+
+.jpg
+{
+    width: 100px;
+    height: 160px;
+    background: url('../img/jpg.jpg');
+}
+
+.gif
+{
+    width: 100px;
+    height: 160px;
+    background: url('../img/gif.gif');
+}
+
+.massa
+{
+    width: 120px;
+    height: 100px;
+    background: #ffff00 url('../img/massa-red.png');
+}
+
+.loremdummy
+{
+    overflow: hidden;
+    width: 400px;
+    background: #cccccc;
+}
+
+.vitae
+{
+    width: 64px;
+    height: 64px;
+
+    background-image: url('../img/vitae-yellow.png');
+}
+
+.qwerqwer
+{
+    width: 400px;
+}
+
+.hello-with-hex
+{
+    width: 300px;
+    height: 80px;
+
+    background: url('../img/transparent-hex.png'), url('../img/hello-orange.png');
+}
+
+.meta-include-false
+{
+    width: 150px;
+    height: 100px;
+    /* @meta {"spritesheet": {"include": false}} */
+    background: url('../img/no-spritesheet.png');
+}
+
+.meta-include-true
+{
+    width: 64px;
+    height: 64px;
+    /* @meta {"spritesheet": {"include": true}} */
+    background-image: url('../img/dummy-blue.png');
+}
+
+.external-image
+{
+    width: 538px;
+    height: 190px;
+    background: url('https://www.google.com/images/srpr/logo11w.png');
+}

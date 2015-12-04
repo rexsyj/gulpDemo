@@ -22,6 +22,7 @@
   "devDependencies": {
     "del": "^2.1.0",
     "gulp": "^3.9.0",
+    "gulp-css-spriter": "^0.3.3",
     "gulp-less": "^3.0.5"
   }
 }

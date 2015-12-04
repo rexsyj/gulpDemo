@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var less = require('gulp-less');
+var spriter = require('gulp-css-spriter');
 
 gulp.task('clean', function() {
     return del(['build']);
@@ -15,4 +16,13 @@ gulp.task('less', function(){
         .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', ["del","less"]);
+gulp.task('spriter', function() {
+    return gulp.src('./css/overall.css')
+        .pipe(spriter({
+            'spriteSheet': 'build/img/spritesheet.png',
+            'pathToSpriteSheetFromCSS': '../img/spritesheet.png'
+        }))
+        .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('default', ["clean","less","spriter"]);
