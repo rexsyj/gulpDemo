@@ -9,13 +9,14 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('clean', function() {
     return del(['build']);
 });
 
 gulp.task('less', function(){
-    gulp.src('./less/normal.less')
+    return gulp.src('./less/normal.less')
         .pipe(less())
         .pipe(gulp.dest('build/css'));
 });
@@ -53,6 +54,12 @@ gulp.task('uglify', function() {
     return gulp.src('./js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('imagemin', function() {
+    return gulp.src('./img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('default', ["clean"]);
